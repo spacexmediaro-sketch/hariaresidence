@@ -39,7 +39,7 @@ export default function WhatsAppButton() {
               Bună ziua! 👋 Suntem online și gata să vă ajutăm cu orice întrebare despre proiectele noastre.
             </p>
             <a
-              href="https://wa.me/40700000000?text=Buna%20ziua!%20Sunt%20interesat%20de%20un%20proiect%20HARIA%20Residence."
+              href="https://wa.me/40740459868?text=Buna%20ziua!%20Sunt%20interesat%20de%20un%20proiect%20HARIA%20Residence."
               target="_blank"
               rel="noopener noreferrer"
               className="block w-full text-center py-3 rounded-sm text-xs font-semibold text-white"

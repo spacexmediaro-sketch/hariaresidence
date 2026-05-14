@@ -78,7 +78,7 @@ export default function Contact() {
                   {
                     icon: Phone,
                     label: "Telefon",
-                    value: "+40 700 000 000\n+40 721 000 000",
+                    value: "+40 740 459 868",
                   },
                   {
                     icon: Mail,
