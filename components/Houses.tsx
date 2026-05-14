@@ -44,7 +44,7 @@ const houses = [
     id: 5,
     name: "Casa Lumina",
     project: "HARIA Smart Living",
-    image: "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&q=85&auto=format&fit=crop",
+    image: "https://images.unsplash.com/photo-1570129477492-45c003edd2be?w=700&q=85&auto=format&fit=crop",
     rooms: 4, baths: 2, surface: 155, garden: 250, parking: 2,
     price: 175000, status: "Presale", floor: "Parter+Etaj",
     features: ["Smart Home", "Terasă", "Dressing"],
