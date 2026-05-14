@@ -1,0 +1,394 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --black-matte: #0B0B0B;
+  --black-deep: #111111;
+  --black-card: #161616;
+  --gold-luxury: #C6A56A;
+  --gold-champagne: #D9C29C;
+  --gold-bronze: #6E5A3C;
+  --gold-glow: #F0D080;
+  --ivory: #F5F1EA;
+  --transition-luxury: cubic-bezier(0.25, 0.1, 0.25, 1);
+  --transition-cinematic: cubic-bezier(0.43, 0.195, 0.02, 1);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: var(--black-matte);
+  color: var(--ivory);
+  font-family: 'Inter', sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ─── SCROLLBAR LUXURY ─── */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: #111;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #C6A56A, #6E5A3C);
+  border-radius: 4px;
+}
+
+/* ─── SELECTION ─── */
+::selection {
+  background: rgba(198, 165, 106, 0.3);
+  color: #F5F1EA;
+}
+
+/* ─── GOLD TEXT GRADIENT ─── */
+.text-gold-gradient {
+  background: linear-gradient(135deg, #C6A56A 0%, #D9C29C 40%, #F0D080 60%, #C6A56A 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: shimmer 4s linear infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: 0% center; }
+  100% { background-position: 200% center; }
+}
+
+/* ─── GOLD SHIMMER BORDER ─── */
+.border-gold {
+  border: 1px solid rgba(198, 165, 106, 0.3);
+}
+
+.border-gold-bright {
+  border: 1px solid rgba(198, 165, 106, 0.7);
+}
+
+/* ─── GLASS CARD ─── */
+.glass-card {
+  background: rgba(22, 22, 22, 0.8);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(198, 165, 106, 0.15);
+}
+
+.glass-nav {
+  background: rgba(11, 11, 11, 0.85);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+  border-bottom: 1px solid rgba(198, 165, 106, 0.1);
+}
+
+/* ─── GLOW EFFECTS ─── */
+.glow-gold {
+  box-shadow: 0 0 20px rgba(198, 165, 106, 0.3), 0 0 60px rgba(198, 165, 106, 0.1);
+}
+
+.glow-gold-hover:hover {
+  box-shadow: 0 0 30px rgba(198, 165, 106, 0.4), 0 0 80px rgba(198, 165, 106, 0.15);
+  transition: box-shadow 0.4s ease;
+}
+
+.text-glow {
+  text-shadow: 0 0 20px rgba(198, 165, 106, 0.5);
+}
+
+/* ─── BUTTON PREMIUM ─── */
+.btn-gold {
+  background: linear-gradient(135deg, #C6A56A 0%, #D9C29C 50%, #C6A56A 100%);
+  background-size: 200% auto;
+  color: #0B0B0B;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  transition: background-position 0.5s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-gold:hover {
+  background-position: right center;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 40px rgba(198, 165, 106, 0.4);
+}
+
+.btn-outline-gold {
+  background: transparent;
+  border: 1px solid rgba(198, 165, 106, 0.6);
+  color: #C6A56A;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  transition: all 0.4s ease;
+}
+
+.btn-outline-gold:hover {
+  background: rgba(198, 165, 106, 0.08);
+  border-color: #C6A56A;
+  box-shadow: 0 0 20px rgba(198, 165, 106, 0.2);
+}
+
+/* ─── DIVIDER ─── */
+.divider-gold {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #C6A56A, transparent);
+}
+
+/* ─── SECTION LABELS ─── */
+.section-label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #C6A56A;
+}
+
+/* ─── HERO VIDEO ─── */
+.hero-video-overlay {
+  background: linear-gradient(
+    to bottom,
+    rgba(11, 11, 11, 0.2) 0%,
+    rgba(11, 11, 11, 0.5) 40%,
+    rgba(11, 11, 11, 0.85) 80%,
+    rgba(11, 11, 11, 1) 100%
+  );
+}
+
+/* ─── CARD HOVER ─── */
+.card-luxury {
+  transition: transform 0.5s var(--transition-cinematic), box-shadow 0.5s ease;
+}
+
+.card-luxury:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(198, 165, 106, 0.2);
+}
+
+/* ─── PROJECT CARD IMAGE ─── */
+.project-img-wrap {
+  overflow: hidden;
+}
+
+.project-img-wrap img {
+  transition: transform 0.8s var(--transition-cinematic);
+}
+
+.project-img-wrap:hover img {
+  transform: scale(1.08);
+}
+
+/* ─── PARALLAX ─── */
+.parallax-section {
+  will-change: transform;
+}
+
+/* ─── CONFIGURATOR ─── */
+.config-option {
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.config-option:hover {
+  border-color: rgba(198, 165, 106, 0.6);
+  background: rgba(198, 165, 106, 0.05);
+}
+
+.config-option.selected {
+  border-color: #C6A56A;
+  background: rgba(198, 165, 106, 0.1);
+  box-shadow: 0 0 0 1px #C6A56A, inset 0 0 20px rgba(198, 165, 106, 0.05);
+}
+
+/* ─── PROGRESS BAR ─── */
+.progress-fill {
+  background: linear-gradient(90deg, #6E5A3C, #C6A56A, #D9C29C);
+  transition: width 0.6s var(--transition-cinematic);
+}
+
+/* ─── GOLD LINE ANIMATED ─── */
+.gold-line-animated {
+  position: relative;
+  overflow: hidden;
+}
+
+.gold-line-animated::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 1px;
+  width: 0;
+  background: linear-gradient(90deg, #C6A56A, #D9C29C);
+  transition: width 0.6s ease;
+}
+
+.gold-line-animated:hover::after {
+  width: 100%;
+}
+
+/* ─── FLOATING PARTICLES ─── */
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(198,165,106,0.6) 0%, rgba(198,165,106,0) 70%);
+  animation: floatParticle linear infinite;
+  pointer-events: none;
+}
+
+@keyframes floatParticle {
+  0% {
+    transform: translateY(100vh) scale(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(-10vh) scale(1);
+    opacity: 0;
+  }
+}
+
+/* ─── COUNTER ─── */
+.counter-number {
+  font-family: 'Cinzel', serif;
+  background: linear-gradient(135deg, #C6A56A, #D9C29C);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ─── INPUT LUXURY ─── */
+.input-luxury {
+  background: rgba(22, 22, 22, 0.8);
+  border: 1px solid rgba(198, 165, 106, 0.2);
+  color: #F5F1EA;
+  font-family: 'Inter', sans-serif;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input-luxury:focus {
+  outline: none;
+  border-color: rgba(198, 165, 106, 0.6);
+  box-shadow: 0 0 0 1px rgba(198, 165, 106, 0.2), 0 0 20px rgba(198, 165, 106, 0.05);
+}
+
+.input-luxury::placeholder {
+  color: rgba(245, 241, 234, 0.3);
+}
+
+/* ─── LOGO ANIMATED SVG ─── */
+.logo-hr-path {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: drawPath 3s ease forwards;
+}
+
+@keyframes drawPath {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.logo-shimmer-overlay {
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(240, 208, 128, 0.4) 50%,
+    transparent 100%
+  );
+  background-size: 200% 100%;
+  animation: logoShimmer 3s ease-in-out infinite;
+}
+
+@keyframes logoShimmer {
+  0% { background-position: -200% center; }
+  100% { background-position: 200% center; }
+}
+
+/* ─── WHATSAPP BUTTON ─── */
+.whatsapp-btn {
+  animation: waPulse 2.5s ease-in-out infinite;
+}
+
+@keyframes waPulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.4); }
+  50% { box-shadow: 0 0 0 16px rgba(37, 211, 102, 0); }
+}
+
+/* ─── REVEAL ANIMATIONS ─── */
+.reveal-from-bottom {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease, transform 0.8s var(--transition-cinematic);
+}
+
+.reveal-from-bottom.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ─── TESTIMONIAL CARD ─── */
+.testimonial-card {
+  background: rgba(22, 22, 22, 0.6);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(198, 165, 106, 0.12);
+  transition: all 0.4s ease;
+}
+
+.testimonial-card:hover {
+  border-color: rgba(198, 165, 106, 0.3);
+  background: rgba(22, 22, 22, 0.85);
+}
+
+/* ─── GALLERY ─── */
+.gallery-item {
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.gallery-item::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(11,11,11,0.8) 0%, transparent 60%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.gallery-item:hover::after {
+  opacity: 1;
+}
+
+.gallery-item img {
+  transition: transform 0.6s var(--transition-cinematic);
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
+}
+
+/* ─── MOBILE MENU ─── */
+.mobile-menu {
+  background: rgba(11, 11, 11, 0.98);
+  backdrop-filter: blur(30px);
+}
