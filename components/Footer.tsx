@@ -176,7 +176,7 @@ export default function Footer() {
             className="text-ivory/25 text-xs text-center"
             style={{ fontFamily: "Inter, sans-serif", fontSize: "0.75rem" }}
           >
-            © 2025 HARIA Residence. Toate drepturile rezervate. · CUI: RO00000000 · J23/0000/2016
+            © 2025 HARIA RESIDENCE SRL. Toate drepturile rezervate. · CUI: RO35832849 · J2016004162400
           </p>
           <p
             className="text-ivory/20 text-xs"

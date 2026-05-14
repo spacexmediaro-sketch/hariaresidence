@@ -3,11 +3,11 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "HARIA Residence | Locuințe Premium în Comuna Berceni",
-  description: "HARIA Residence — dezvoltator imobiliar premium din Comuna Berceni. Locuințe moderne, finisaje de lux, arhitectură contemporană. Creăm. Dezvoltăm. Construim Frumos.",
-  keywords: "haria residence, locuinte premium, berceni, imobiliare lux, case moderne, vila, rezidential premium",
+  description: "HARIA RESIDENCE SRL — dezvoltator imobiliar premium din Comuna Berceni, înființat 2016. CUI: RO35832849. Locuințe moderne, finisaje de lux, arhitectură contemporană. Creăm. Dezvoltăm. Construim Frumos.",
+  keywords: "haria residence, locuinte premium, berceni, imobiliare lux, case moderne, vila, rezidential premium, haria residence srl",
   openGraph: {
     title: "HARIA Residence | Arhitectură Premium",
-    description: "Locuințe moderne create pentru un stil de viață exclusivist.",
+    description: "HARIA RESIDENCE SRL — Locuințe moderne create pentru un stil de viață exclusivist în Comuna Berceni.",
     type: "website",
   },
 };

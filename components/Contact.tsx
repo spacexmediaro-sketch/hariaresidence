@@ -72,8 +72,8 @@ export default function Contact() {
                 {[
                   {
                     icon: MapPin,
-                    label: "Adresă",
-                    value: "Strada Principală 1,\nComuna Berceni, Ilfov",
+                    label: "Adresă Firmă",
+                    value: "HARIA RESIDENCE SRL\nComuna Berceni, Ilfov",
                   },
                   {
                     icon: Phone,
